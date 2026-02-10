@@ -6,11 +6,18 @@ João Marcos Nogueira - 23159258-2
 Gabriel Sestito Guerra - 26007509-2
 
 Tecnologia - javascript/node/react
+
 Padrão do projeto - mvc
-APIs - 
-Requisitos conflitantes - 
-Desempenho - 
-Segurança - 
-Escalabilidade - 
+
+APIs -
+
+Requisitos conflitantes -
+
+Desempenho -
+
+Segurança -
+
+Escalabilidade -
+
 Custo - 
 
