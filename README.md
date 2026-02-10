@@ -5,4 +5,12 @@ Tiago Domingues da silva - 24454451-2
 João Marcos Nogueira - 23159258-2
 Gabriel Sestito Guerra - 26007509-2
 
-teste
+Tecnologia - javascript/node/react
+Padrão do projeto - mvc
+APIs - 
+Requisitos conflitantes - 
+Desempenho - 
+Segurança - 
+Escalabilidade - 
+Custo - 
+
