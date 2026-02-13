@@ -5,7 +5,7 @@ Tiago Domingues da silva - 24454451-2
 João Marcos Nogueira - 23159258-2
 Gabriel Sestito Guerra - 26007509-2
 
-Tecnologia - javascript/node/react
+Tecnologia - PHP LARAVEL/HTML/CSS/JS
 
 Padrão do projeto - mvc
 
