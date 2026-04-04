@@ -1,0 +1,58 @@
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #f3f4f6;
+}
+
+.navBar {
+  background-color: white;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.navBar span {
+  margin: 0% 2% 0% 2%;
+  cursor: pointer;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.logoBackground {
+  background-color: #6f00ea;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 30px;
+}
+
+.logoName{
+    color:black;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.textPurpleBold {
+  color: #6f00ea;
+  font-weight: 600;
+}
+
+.navBarSelected{
+    color: black;
+    font-weight: 600;
+}
+
+.username{
+    margin-right: 5%;
+}
