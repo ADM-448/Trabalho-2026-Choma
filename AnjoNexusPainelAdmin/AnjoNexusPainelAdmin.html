@@ -27,33 +27,68 @@
     </div>
 
 
+    <div class="titleContainer">
+        <h1 class="">Painel do <span class="textPurpleBold">Dev Master</span></h1>
+        <div class="textGray">Gerenciamento global de recursos e economia de sistema</div>
+    </div>
     
-    <h1>Painel do <span class="textPurpleBold">Dev Master</span></h1>
-    <div>Gerenciamento global de recursos e economia de sistema</div>
-    
-    <div>
-        <div>
-            Usuários totais
-            <div>1</div>
+    <div class="dashboardCardContainer">
+        <div class="dashboardCard">
+            <span class="dashboardCardText">Usuários totais</span> 
+            <div class="dashboardCardNumber">1</div>
         </div>
 
-        <div>
-            Créditos em circulação
-            <div>4</div>
+        <div class="dashboardCard">
+            <span class="dashboardCardText">Créditos em circulação</span>
+            <div class="dashboardCardNumber">4</div>
         </div>
-        <div>
-            Propostas geradas
-            <div>1</div>
+        <div class="dashboardCard">
+            <span class="dashboardCardText">Propostas geradas</span>
+            <div class="dashboardCardNumber">1</div>
         </div>
-        <div>
-            Editais ativos
-            <div>89</div>
+        <div class="dashboardCard">
+            <span class="dashboardCardText">Editais ativos</span>
+            <div class="dashboardCardNumber">89</div>
         </div>
     </div>
     
     <div class="gridAdmin">
-        <div>
+        <div class="gridAdminUserActivity">
+            <div class="gridAdminUserHeader">
+                <h5>Usuários Recentes</h5>
+                <span>Ver Todos</span>
+            </div>
+            
+            <hr/>
+            
+            <div style="display: flex;">
+                <div class="gridUserActivityAvatar">P</div>
+                <div class="gridAdminUserActivityInfo">
+                    <div>
+                        <h6 class="gridUserActivityName">Phillip Walker</h6>
+                        <div class="gridUserActivityEmail">philipwalker@example.com</div>
+                    </div>
+                    <div>
+                        <div class="gridUserActivityCredits">4 créditos</div>
+                        <div class="gridUserActivityLastUpdate">5 dias atrás</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        
+        <div class="gridAdminCredits">
+            <h5>Gestão de créditos</h5>
+            <p>Controle manualmente o saldo dos usuários e gere faturas manuais.</p>
+            <button type="button" class="btn btn-light">Gerenciar Saldo</button>
+        </div>
+        
+        <div class="gridAdminSubscriptions">
+            <h5>Assinaturas SaaS</h5>
+            <p>Em breve: Integração com Mercado Pago para automação de mensalidades e planos.</p>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button">Configurar Planos</button>
+            </div>
         </div>
 
     </div>
