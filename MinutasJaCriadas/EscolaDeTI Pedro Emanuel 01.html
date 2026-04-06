@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnjoNexus - Proposta Documental</title>
+    <style>
+
+        :root {
+            --bg-color: #f9fafb;
+            --white: #ffffff;
+            --primary: #5946d2;
+            --primary-hover: #4a3abb;
+            --text-dark: #111827;
+            --text-base: #374151;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+            --banner-bg: #111827;
+            --bg-gray: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-base);
+            line-height: 1.5;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .logo-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .nav-user {
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .page-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .page-title svg {
+            color: var(--primary);
+        }
+
+        .btn-voltar {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            color: var(--text-base);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Cartão Principal (Branco) */
+        .main-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+
+        /* Banner Escuro */
+        .dark-banner {
+            background-color: var(--banner-bg);
+            color: var(--white);
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .banner-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .badge-number {
+            background-color: var(--primary);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .banner-info h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .banner-meta {
+            font-size: 12px;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline-dark {
+            background-color: transparent;
+            border: 1px solid #4b5563;
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: bg 0.2s;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #374151;
+        }
+
+        /* Barra Resumo/Prompt */
+        .resumo-bar {
+            background-color: var(--bg-gray);
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-base);
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+        }
+
+        .resumo-text {
+            padding: 32px;
+            font-size: 14px;
+            color: var(--text-base);
+            line-height: 1.6;
+        }
+
+        /* Área do Documento */
+        .document-area {
+            padding: 0 60px 40px 60px;
+        }
+
+        .doc-title {
+            font-size: 26px;
+            color: var(--text-dark);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        hr.divider {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+
+        .doc-meta {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .doc-meta strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .doc-section {
+            margin-bottom: 32px;
+        }
+
+        .doc-section h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .doc-section p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: var(--text-base);
+            line-height: 1.7;
+        }
+
+        .doc-section ul, .doc-section ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            font-size: 15px;
+            color: var(--text-base);
+            line-height: 1.7;
+        }
+
+        .doc-section li {
+            margin-bottom: 8px;
+        }
+
+        .doc-section li strong {
+            color: var(--text-dark);
+        }
+
+        .doc-conclusion {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .doc-footer-italic {
+            font-style: italic;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        /* Rodapé do Cartão */
+        .card-footer {
+            background-color: var(--bg-gray);
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-dates {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .footer-dates div {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-outline {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <div class="logo-icon">$</div>
+                AnjoNexus
+            </div>
+            <div class="nav-links">
+                <a href="#">Dashboard</a>
+                <a href="#">Radar de Editais</a>
+                <a href="#">Minha Empresa</a>
+                <a href="#" class="active">Painel Admin ⚡</a>
+            </div>
+        </div>
+        <div class="nav-user">
+            Ademar de Araújo Teisen
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="page-header">
+            <div class="page-title">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Proposta Documental
+            </div>
+            <button class="btn-voltar">← Voltar</button>
+        </div>
+
+        <div class="main-card">
+            
+            <div class="dark-banner">
+                <div class="banner-left">
+                    <div class="badge-number">1</div>
+                    <div class="banner-info">
+                        <h2>Versão Completa da Proposta</h2>
+                        <div class="banner-meta">
+                            Status: Pronto • 📅 Minuta gerada em: 24/03/2026 23:01:39 • Editado pelo usuário • ✏️ Editado em: 26/03/2026 14:22:13
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-outline-dark">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    Editar Proposta
+                </button>
+            </div>
+
+            <div class="resumo-bar">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Ver Resumo/Prompt do Cliente
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+
+            <div class="resumo-text">
+                Teste Esta é uma proposta estruturada para o <strong>Prêmio Mulheres Inovadoras 7ª Edição – 2026</strong>, redigida com foco na persuasão técnica, no alinhamento estratégico com as diretrizes da FINEP e na valorização do capital intelectual feminino.
+            </div>
+
+            <hr class="divider" style="margin: 0;">
+
+            <div class="document-area">
+                <h1 class="doc-title">Proposta de Candidatura: Projeto BioDetect</h1>
+                
+                <hr class="divider">
+
+                <div class="doc-meta">
+                    <div><strong>Edital:</strong> Prêmio Mulheres Inovadoras 7ª Edição – 2026 (FINEP)</div>
+                    <div><strong>Eixo Temático:</strong> Bioeconomia / Saúde Pública / Cidades Inteligentes e Sustentáveis</div>
+                    <div><strong>Proponente:</strong> BioDetect Deep Tech Solutions</div>
+                    <div><strong>Liderança:</strong> Dra. [Nome], Dra. [Nome] e Dra. [Nome] (Doutoras em Bioquímica)</div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="doc-section">
+                    <h3>1. Resumo Executivo</h3>
+                    <p>A <strong>BioDetect</strong> é uma startup <em>deep tech</em> de base biotecnológica, fundada e liderada por três doutoras em Bioquímica. Desenvolvemos uma solução disruptiva de diagnóstico molecular <em>point-of-care</em> (PoC) para doenças infecciosas negligenciadas. Unindo a biotecnologia de ponta (amplificação isotérmica - LAMP) à Inteligência Artificial, oferecemos a precisão de um laboratório centralizado na palma da mão, permitindo a descentralização do SUS e a economia de bilhões em gastos com internações evitáveis.</p>
+                </div>
+
+                <div class="doc-section">
+                    <h3>2. O Problema e a Oportunidade</h3>
+                    <p>O sistema de saúde brasileiro (SUS) enfrenta um gargalo crítico: o <strong>diagnóstico tardio</strong>. Atualmente, a detecção de patógenos como Dengue, Zika e Tuberculose depende de:</p>
+                    <ol>
+                        <li><strong>Testes Rápidos Imunológicos:</strong> Baixa sensibilidade e alta taxa de falsos negativos na fase inicial.</li>
+                        <li><strong>PCR Laboratorial:</strong> Alto custo, necessidade de infraestrutura complexa e tempo de resposta de dias/semanas.</li>
+                    </ol>
+                    <p>Essa lacuna gera uma pressão insustentável na atenção secundária e terciária, superlotando hospitais com casos que poderiam ter sido manejados na atenção primária se houvesse diagnóstico precoce.</p>
+                </div>
+
+                <div class="doc-section">
+                    <h3>3. A Solução: Inovação Tecnológica</h3>
+                    <p>Nossa inovação reside no dispositivo <strong>BioDetect Mobile</strong>, que integra:</p>
+                    <ul>
+                        <li><strong>Tecnologia LAMP (Loop-mediated Isothermal Amplification):</strong> Permite a amplificação de DNA/RNA em temperatura constante, eliminando a necessidade de termocicladores caros.</li>
+                        <li><strong>Sensores Optoeletrônicos + IA:</strong> O dispositivo se conecta ao smartphone; nossa IA proprietária analisa a mudança colorimétrica/fluorescente em tempo real, fornecendo um laudo digital em menos de 30 minutos.</li>
+                        <li><strong>Desempenho:</strong> Sensibilidade e especificidade equivalentes ao RT-PCR Gold Standard, com custo de produção 80% inferior e sem necessidade de cadeia de frio rigorosa.</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section">
+                    <h3>4. Liderança Feminina e Capital Intelectual</h3>
+                    <p>A BioDetect personifica o objetivo do Prêmio Mulheres Inovadoras. A empresa é 100% gerida por mulheres cientistas que transitaram da bancada acadêmica para o empreendedorismo de alto impacto.</p>
+                    <ul>
+                        <li><strong>Dra. A:</strong> Especialista em Biologia Molecular e Patentes.</li>
+                        <li><strong>Dra. B:</strong> Especialista em Bioquímica de Proteínas e Gestão de Laboratório.</li>
+                        <li><strong>Dra. C:</strong> Especialista em Bioinformática e Ciência de Dados. Essa composição garante a excelência técnica necessária para mitigar riscos tecnológicos inerentes ao setor de <em>healthtech</em>.</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section">
+                    <h3>5. Modelo de Negócios e Mercado</h3>
+                    <p>Operamos em um modelo híbrido focado em escala e impacto:</p>
+                    <ul>
+                        <li><strong>B2G (Business to Government):</strong> Venda de kits de diagnóstico e locação de dispositivos para prefeituras e estados, visando a descentralização do acesso em regiões remotas (Amazônia, áreas rurais e periferias urbanas).</li>
+                        <li><strong>B2B (Business to Business):</strong> Fornecimento para clínicas privadas e laboratórios que buscam agilizar o triagem inicial.</li>
+                        <li><strong>Receita Recorrente:</strong> Modelo de suprimentos (consumíveis/cartuchos) e licenciamento do software de análise por IA.</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section">
+                    <h3>6. Impacto Social e Alinhamento com o Edital</h3>
+                    <p>O projeto BioDetect atende diretamente aos objetivos de <strong>Bioeconomia</strong> e <strong>Cidades Inteligentes e Sustentáveis</strong>:</p>
+                    <ul>
+                        <li><strong>Social:</strong> Democratização da saúde de alta complexidade. Redução da mortalidade por doenças negligenciadas.</li>
+                        <li><strong>Econômico:</strong> Redução drástica dos custos do SUS com tratamentos de casos agravados por diagnóstico tardio.</li>
+                        <li><strong>Sustentabilidade:</strong> Dispositivos portáteis reduzem a pegada de carbono logística de transporte de amostras biológicas para grandes centros.</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section">
+                    <h3>7. Objetivos com o Prêmio Finep</h3>
+                    <p>A subvenção e o suporte do Prêmio Mulheres Inovadoras serão alocados para:</p>
+                    <ol>
+                        <li><strong>Validação do Piloto Industrial:</strong> Transição do protótipo funcional (TRL 6) para a produção em lote piloto (TRL 8).</li>
+                        <li><strong>Certificação Regulatória:</strong> Aceleração do dossiê junto à ANVISA para registro do dispositivo e dos kits.</li>
+                        <li><strong>Expansão Comercial:</strong> Fortalecimento da estratégia de Go-to-Market para editais de compras públicas de inovação.</li>
+                    </ol>
+                </div>
+
+                <hr class="divider">
+
+                <div class="doc-conclusion">
+                    <strong>Conclusão:</strong> A BioDetect não entrega apenas um teste; entregamos soberania tecnológica em saúde e eficiência pública. Estamos prontas para transformar a ciência brasileira em uma potência de mercado, liderada por mulheres.
+                </div>
+
+                <hr class="divider">
+
+                <div class="doc-footer-italic">
+                    Este documento foi estruturado conforme os padrões de excelência exigidos pela FINEP, focando na clareza do mérito inovador e na viabilidade do negócio.
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+                <div class="footer-dates">
+                    <div>📅 Minuta criada em: <strong>24/03/2026 23:01:39</strong></div>
+                    <div>✏️ Última edição manual: <strong>26/03/2026 14:22:13</strong></div>
+                </div>
+                <div class="footer-actions">
+                    <button class="btn-outline">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        Copiar
+                    </button>
+                    <button class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                        Imprimir PDF
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
