@@ -4,19 +4,12 @@ Roberto Yanez Sanz - 23079491-2
 João Marcos Nogueira - 23159258-2
 Gabriel Sestito Guerra - 26007509-2
 
+Nome - AnjoNexus
+
 Tecnologia - PHP LARAVEL/HTML/CSS/JS
 
 Padrão do projeto - mvc
 
-APIs -
+APIs - API Gemini, API Mercado Pago
 
-Requisitos conflitantes -
-
-Desempenho -
-
-Segurança -
-
-Escalabilidade -
-
-Custo - 
 
