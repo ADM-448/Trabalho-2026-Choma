@@ -1,0 +1,166 @@
+       :root
+       {
+           --primary: #4f46e5;
+           --bg: #f8fafc;
+           --text: #1e293b;
+           --text-muted: #64748b;
+           --border: #e2e8f0;
+           --card: #ffffff;
+       }
+
+       /* Dark Mode Toggle opcional - vou usar um Clean Light por ser "mais simples" visualmente */
+       body
+       {
+           font-family: 'Inter', sans-serif;
+           background-color: var(--bg);
+           color: var(--text);
+           margin: 0;
+           display: flex;
+       }
+
+       /* Sidebar Limpa */
+       aside
+       {
+           width: 240px;
+           background: #1e293b;
+           color: white;
+           height: 100vh;
+           padding: 2rem 1rem;
+           position: fixed;
+       }
+
+       .logo
+       {
+           font-weight: 700;
+           font-size: 1.25rem;
+           margin-bottom: 2rem;
+           color: #818cf8;
+       }
+
+       nav a
+       {
+           text-decoration: none;
+           color: #94a3b8;
+           padding: 0.75rem 1rem;
+           display: block;
+           border-radius: 0.5rem;
+           margin-bottom: 0.25rem;
+       }
+
+       nav a:hover,
+       nav a.active
+       {
+           background: #334155;
+           color: white;
+       }
+
+       /* Conteúdo Principal */
+       main
+       {
+           margin-left: 240px;
+           padding: 3rem;
+           flex: 1;
+       }
+
+       header
+       {
+           margin-bottom: 2.5rem;
+       }
+
+       h1
+       {
+           font-size: 1.75rem;
+           margin-bottom: 0.5rem;
+       }
+
+       p
+       {
+           color: var(--text-muted);
+       }
+
+       /* Busca */
+       .search
+       {
+           margin-bottom: 2rem;
+           display: flex;
+           gap: 0.75rem;
+       }
+
+       input
+       {
+           flex: 1;
+           padding: 0.75rem 1rem;
+           border: 1.5px solid var(--border);
+           border-radius: 0.5rem;
+           font-size: 0.95rem;
+           outline: none;
+       }
+
+       input:focus
+       {
+           border-color: var(--primary);
+       }
+
+       /* Grid Simples */
+       .grid
+       {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+           gap: 1.5rem;
+       }
+
+       .card
+       {
+           background: var(--card);
+           border: 1.5px solid var(--border);
+           border-radius: 0.75rem;
+           padding: 1.5rem;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+       }
+
+       .card:hover
+       {
+           border-color: var(--primary);
+       }
+
+       .org
+       {
+           font-size: 0.75rem;
+           font-weight: 700;
+           text-transform: uppercase;
+           color: var(--primary);
+           margin-bottom: 0.5rem;
+       }
+
+       h2
+       {
+           font-size: 1.1rem;
+           margin: 0 0 0.75rem;
+       }
+
+       .desc
+       {
+           font-size: 0.9rem;
+           color: var(--text-muted);
+           line-height: 1.5;
+           margin-bottom: 1.5rem;
+       }
+
+       .btn
+       {
+           background: var(--primary);
+           color: white;
+           text-decoration: none;
+           padding: 0.6rem 1rem;
+           border-radius: 0.5rem;
+           text-align: center;
+           font-size: 0.85rem;
+           font-weight: 600;
+       }
+
+       .btn:hover
+       {
+           background: #4338ca;
+       }
