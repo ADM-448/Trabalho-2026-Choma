@@ -1,0 +1,151 @@
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    margin: 0;
+}
+
+.barraNavegacao {
+  background-color: white;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.barraNavegacao span {
+  margin: 0 2%;
+  cursor: pointer;
+}
+
+.containerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.fundoLogo {
+  background-color: #6f00ea;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 30px;
+}
+
+.nomeLogo {
+    color: black;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.roxoNegrito {
+  color: #6f00ea;
+  font-weight: 600;
+}
+
+.itemSelecionado {
+    color: black;
+    font-weight: 600;
+}
+
+.usuario {
+    margin-right: 5%;
+}
+
+.containerTitulo {
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.textoCinza {
+    color: gray;
+}
+
+.containerCards {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 40px 50px;
+}
+
+.cardDashboard {
+    background-color: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    flex: 1;
+    padding: 25px;
+    transition: transform 0.2s;
+}
+
+.cardDashboard:hover {
+    background-color: #f9fafb;
+    border-color: #6f00ea;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.etiqueta {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.nomePlano {
+    color: black;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.numeroCard {
+    color: black;
+    padding: 10px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.periodo {
+    font-size: 14px; 
+    color: gray; 
+    font-weight: 400;
+}
+
+.listaRecursos {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    color: #4b5563;
+    margin: 20px 0;
+}
+
+.listaRecursos li {
+    margin-bottom: 10px;
+}
+
+.planoDestaque {
+    
+    position: relative;
+}
+
+.botaoRoxo {
+    background-color: #6f00ea !important;
+    border: none !important;
+    font-weight: 500;
+}
+
+.botaoBordaRoxa {
+    color: #6f00ea !important;
+    border-color: #6f00ea !important;
+    font-weight: 500;
+}
+
+.rodape {
+    text-align: center;
+    margin-bottom: 50px;
+}
