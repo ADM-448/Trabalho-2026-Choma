@@ -1,0 +1,53 @@
+.titleContainer {
+    padding: 30px;
+}
+
+.textGray {
+    color: #6c757d;
+}
+
+.dashboardCardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding: 0 30px;
+}
+
+.dashboardCard {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+.dashboardCardText {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.dashboardCardNumber {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.actionsContainer {
+    padding: 30px;
+}
+
+.proposalContainer {
+    padding: 30px;
+}
+
+.proposalCard {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    margin-top: 12px;
+}
+
+.proposalDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
